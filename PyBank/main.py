@@ -6,7 +6,7 @@ GreatestIncrease = ['','0']
 GreatestDecrease = ['','0']
 ProfitLosses = []
 
-with open('budget_data.csv', newline='') as csvfile:
+with open('Resources/budget_data.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     for i, row in enumerate(reader):
         if i != 0:
@@ -29,7 +29,7 @@ print(f'Average Change: ${round(sum(ProfitLosses)/len(ProfitLosses), 2)}')
 print(f'Greatest Increase: {GreatestIncrease[0]} (${GreatestIncrease[1]})')
 print(f'Greatest Decrease: {GreatestDecrease[0]} (${GreatestDecrease[1]})')
 
-Analysis = open("FinancialReport.txt", "w+")
+Analysis = open("analysis/FinancialReport.txt", "w+")
 Analysis.write('Financial Analysis\n----------------------------\n')
 Analysis.write(f'Total Months: {months}\n')
 Analysis.write(f'Total: ${total}\n')
