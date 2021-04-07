@@ -16,7 +16,7 @@ with open('Resources/budget_data.csv', newline='') as csvfile:
             value = int(row[0].split(',')[1])
             months += 1
             total += value 
-# checks and updates greates value            
+# checks and updates greatest value            
             if int(GreatestIncrease[1]) < value:
                 GreatestIncrease[0] = row[0].split(',')[0]
                 GreatestIncrease[1] = str(value)
@@ -24,7 +24,7 @@ with open('Resources/budget_data.csv', newline='') as csvfile:
             elif int(GreatestDecrease[1]) > value:
                  GreatestDecrease[0] = row[0].split(',')[0]
                  GreatestDecrease[1] = str(value)
-#checks so se if its a negative 
+#checks to se if its a negative 
             if value < 0:
                 ProfitLosses.append(value) 
                 
